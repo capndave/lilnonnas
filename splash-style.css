@@ -1,0 +1,42 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Cabin", sans-serif;
+    height: 100vh;
+}
+
+body {
+    font-size: 1rem;
+    background-color: #ECEBEA;
+}
+
+#circle {
+    width: 100%;
+}
+
+#header {
+  margin: 15px 15px 0 15px;
+}
+
+#main-content {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+button {
+  border: 3px solid #e73628;
+  border-radius: 10px;
+  color: #E73628;
+  background-color: transparent;
+  width: 350px;
+  height: 100px;
+  outline: none;
+  font-family: cabin, sans-serif;
+  font-size: 38px;
+  overflow: hidden;
+  margin: 24px auto 0 auto;
+
+}

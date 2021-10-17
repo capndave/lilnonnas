@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>Lil' Nonna's Pizzeria</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">    <link rel="stylesheet" href="splash-style.css"> <!--CSS link-->
+</head>
+<body>
+    <div id = "headerBackground">
+        <div class="container" id="header">
+        </div>
+    </div>
+    <div class="container" id="main-content">
+      <button name="online" onclick="reroute(event)">
+        Order Online
+      </button> 
+      <button name="continue" onclick="reroute(event)">
+        Continue to Website
+      </button> 
+    </div>
+    <div class="container" id="footer">
+    </div>
+</div>
+
+<script>
+  let currentWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0); //gets width of viewport 
+  if (currentWidth >= 500) { //for large widths 
+    window.location = "http://www.lilnonnas.com/main.html"; 
+    //window.location = `${window.location.origin}/main.html`; 
+  }
+  else {
+    $('#header').load('./img/mobile.svg')
+  }
+  reroute = (event) => {
+    if (event.target.name === 'online') {
+      window.location = "https://www.toasttab.com/lilnonnas";
+    } else {
+      window.location = "http://www.lilnonnas.com/main.html";
+    }
+  }
+</script>
+
+
+</body>
+</html>
