@@ -30,8 +30,7 @@
 <script>
   let currentWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0); //gets width of viewport 
   if (currentWidth >= 500) { //for large widths 
-    window.location = "http://www.lilnonnas.com/main.html"; 
-    //window.location = `${window.location.origin}/main.html`; 
+    window.location = `${window.location.origin}/main.html` // reroute 
   }
   else {
     $('#header').load('./img/mobile.svg')
@@ -40,7 +39,7 @@
     if (event.target.name === 'online') {
       window.location = "https://www.toasttab.com/lilnonnas";
     } else {
-      window.location = "http://www.lilnonnas.com/main.html";
+      window.location = `${window.location.origin}/main.html` // reroute 
     }
   }
 </script>
