@@ -144,13 +144,15 @@ td {
 }
 
 .announcements {
-  color: white;
-  background-color: #E73628;
   text-align: center;
+  font-size: 2rem;
   width: 100%;
   padding: 15px 30px 15px 15px;
   margin-left: -15px;
   margin-bottom: 0;
+}
+.announcements div {
+	margin-top: 2rem;
 }
 
 /* Smaller than 375px */
@@ -287,7 +289,6 @@ td {
         display: flex;
         justify-content: center;
         align-items: center;
-
     }
     #nonnaCircle {
         -ms-transform: scale(3, 3); /* IE 9 */
@@ -299,7 +300,6 @@ td {
       max-width: 1200px;
       color: white;
       background-color: #E73628;
-      align: center;
       padding: 24px 0;
       margin-left: 0;
       margin-bottom: 0;
