@@ -86,7 +86,6 @@ jQuery.fn.exists = function () { return this.length > 0; } //check if something 
 
 window.onresize = function () {
 	let currentWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0); //gets width of viewport
-	console.log(currentWidth)
 	if (currentWidth < 743 && $("#logo-main").exists()) {   //switch layout if viewport is narrow and the big(long) logo exists
 		$("#header").empty();                               //removes everything in the header
 		$("#picsRow").remove();                               //removes everything in the header
@@ -139,51 +138,3 @@ getMenu()
 			}
 		}
 	})
-
-
-
-// $.getJSON("https://spreadsheets.google.com/feeds/list/1vE3zEShGMD1e1zfRrc00nHGHyms4NTsU6Ai6BJcKA5k/od6/public/values?alt=json", function(data) {
-//     for(i in data.feed.entry){
-//         //add announcements to menu
-//         if(data.feed.entry[i]['gsx$type']['$t'] == "announcement"){
-//             $(".announcements").append(
-//               "<div display='inline-block'><h1>" + data.feed.entry[i]['gsx$name']['$t'] + " " + data.feed.entry[i]['gsx$description']['$t'] + "</h1></div>"
-//             )
-//         }
-//         //add specials to menu
-//         if(data.feed.entry[i]['gsx$type']['$t'] == "special"){
-//             $(".specials tbody").append(
-//                 "<tr><td class = 'prices' valign= 'top'>" + data.feed.entry[i]['gsx$price']['$t'] + "</td>" +
-//                 "<td class = 'names'><b>" + data.feed.entry[i]['gsx$name']['$t'] + "</b>: " + data.feed.entry[i]['gsx$description']['$t'] + "</td></tr>"
-//             )
-//         }
-//         //add appetizers and slices to menu
-//         if(data.feed.entry[i]['gsx$type']['$t'] == "appetizer" || data.feed.entry[i]['gsx$type']['$t'] == "slice"){
-//             $(".appetizersAndSlices tbody").append(
-//                 "<tr><td class = 'prices' valign= 'top'>" + data.feed.entry[i]['gsx$price']['$t'] + "</td>" +
-//                 "<td class = 'names'><b>" + data.feed.entry[i]['gsx$name']['$t'] + "</b>: " + data.feed.entry[i]['gsx$description']['$t'] + "</td></tr>"
-//             )
-//         }
-//         //add pizzas to menu
-//         if(data.feed.entry[i]['gsx$type']['$t'] == "pizza"){ /*checks for pizzas*/
-//             $(".pizzas tbody").append(
-//                "<tr><td class = 'prices' valign= 'top'>" + data.feed.entry[i]['gsx$price']['$t'] + "</td>" +
-//                 "<td class = 'names'><b>" + data.feed.entry[i]['gsx$name']['$t'] + "</b>: " + data.feed.entry[i]['gsx$description']['$t'] + "</td></tr>"
-//             )
-//         }
-//         //add gf pizzas to menu
-//         if(data.feed.entry[i]['gsx$type']['$t'] == "gf"){ /*checks for pizzas*/
-//             $(".gf tbody").append(
-//                  "<tr><td class = 'prices' valign= 'top'>" + data.feed.entry[i]['gsx$price']['$t'] + "</td>" +
-//                 "<td class = 'names'><b>" + data.feed.entry[i]['gsx$name']['$t'] + "</b>: " + data.feed.entry[i]['gsx$description']['$t'] + "</td></tr>"
-//             )
-//         }
-//         //add sides to menu
-//         else if(data.feed.entry[i]['gsx$type']['$t'] == "side") {
-//             $(".sides tbody").append(
-//                 "<tr><td class = 'prices'>" + data.feed.entry[i]['gsx$price']['$t'] + "</td>" +
-//                 "<td class = 'names'>" + data.feed.entry[i]['gsx$name']['$t'] + "</td></tr>"
-//             )
-//         }
-//     } //end loop
-// }); //end program
