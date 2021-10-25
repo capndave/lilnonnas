@@ -1,6 +1,9 @@
 /*jslint devel: true */
 /*jslint browser: true*/
 /*global $,jQuery*/
+import getMenu from './libs/getMenu.js'
+
+console.log({getMenu})
 
 let originalWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0); //gets width of viewport
 
@@ -95,7 +98,7 @@ window.onresize = function() {
 }
 
 //GET CONTENT FROM GOOGLE SHEETS
-console.log('hi')
+getMenu()
 
 
 // $.getJSON("https://spreadsheets.google.com/feeds/list/1vE3zEShGMD1e1zfRrc00nHGHyms4NTsU6Ai6BJcKA5k/od6/public/values?alt=json", function(data) {
