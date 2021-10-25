@@ -9,7 +9,7 @@ export default async function getMenu() {
 		})
 		await initializeClient()
 		return await getData()
-	} catch {
+	} catch (e) {
 		console.error('Error getting menu', e)
 	}
 }
