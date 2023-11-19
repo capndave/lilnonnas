@@ -1,0 +1,15 @@
+---
+import { Image } from 'astro:assets'
+import mobileTitle from '../images/mobile-title.svg'
+---
+
+<h1>
+  <Image src={mobileTitle} alt='mobile title' />
+</h1>
+
+<style>
+  img {
+    width: calc(100vw - 1rem);
+    height: calc(100vw - 2rem);
+  }
+</style>
