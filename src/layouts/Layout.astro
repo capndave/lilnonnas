@@ -1,8 +1,3 @@
----
-import MobileTitle from '../components/MobileTitle.astro'
-import MobileContactInfo from '../components/MobileContactInfo.astro'
----
-
 <!doctype html>
 <html lang='en'>
   <head>
@@ -18,24 +13,53 @@ import MobileContactInfo from '../components/MobileContactInfo.astro'
     <title>Lil Nonna's Pizzeria</title>
   </head>
   <body>
-    <!-- <MobileTitle />
-    <MobileContactInfo /> -->
     <slot />
   </body>
 </html>
 <style is:global>
   :root {
     --red: #e73628;
+    --red-hover: color-mix(in oklab, var(--red) 75%, black);
     --background-color: #ecebea;
   }
 
   html {
-    background-color: var(--background-color);
     font-size: 20px;
     font-family: Cabin, sans-serif;
   }
 
   body {
     margin: 0;
+    padding: 0 0.5rem;
+  }
+
+  @font-face {
+    font-family: 'SignPainter-HouseShowcard';
+    src:
+      url('/fonts/SignPainter-HouseShowcard.woff2') format('woff2'),
+      url('/fonts/SignPainter-HouseShowcard.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'SignPainter-HouseBrush';
+    src:
+      url('/fonts/SignPainter-HouseBrush.woff2') format('woff2'),
+      url('/fonts/SignPainter-HouseBrush.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'SignPainter-ShowcardStunt';
+    src:
+      url('/fonts/SignPainter-ShowcardStunt.woff2') format('woff2'),
+      url('/fonts/SignPainter-ShowcardStunt.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
   }
 </style>

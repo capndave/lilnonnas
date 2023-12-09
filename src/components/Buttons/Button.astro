@@ -1,18 +1,18 @@
 ---
-const { url, text } = Astro.props
+const { text, id } = Astro.props
 ---
 
-<button onclick='window.location.href={url}'>
+<button {id}>
   {text}
 </button>
 
 <style>
   button {
-    border: 3px solid #e73628;
+    border: 3px solid var(--red);
     border-radius: 10px;
-    color: #e73628;
+    color: var(--red);
     background-color: transparent;
-    min-width: 300px;
+    width: 300px;
     height: 100px;
     outline: none;
     font-family: cabin, sans-serif;

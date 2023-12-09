@@ -1,0 +1,30 @@
+---
+import { Icon } from 'astro-icon'
+---
+
+<div>
+  <a href='https://www.instagram.com/lilnonnas'>
+    <Icon name='bi:instagram' height='40' width='40' />
+  </a>
+  <a href='https://www.facebook.com/lilnonnas'>
+    <Icon name='bi:facebook' height='40' width='40' />
+  </a>
+</div>
+
+<style>
+  a {
+    display: inline-block;
+  }
+  svg {
+    color: var(--red);
+    cursor: pointer;
+  }
+
+  svg:first-of-type {
+    margin-right: 0.33rem;
+  }
+
+  svg:hover {
+    color: var(--red-hover);
+  }
+</style>

@@ -1,9 +1,25 @@
 ---
+import Banner from '../components/Banner.astro'
+import DesktopHeader from '../components/DesktopHeader/index.astro'
 import Layout from '../layouts/Layout.astro'
+import Menu from '../components/Menu/index.astro'
 ---
 
 <Layout>
-  <main>Desktop View</main>
+  <DesktopHeader />
+  <Banner />
+  <main>
+    <Menu />
+  </main>
 </Layout>
 
-<style></style>
+<style>
+  /**
+    Always show vertical scrollbar on desktop page 
+    so that adding dynamic content to page does not
+    then make scrollbar appear and shift page content
+  */
+  body {
+    overflow-y: scroll;
+  }
+</style>

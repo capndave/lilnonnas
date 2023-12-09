@@ -1,13 +1,18 @@
 ---
 import { Image } from 'astro:assets'
-import mobileTitle from '../images/mobile-title.svg'
+import mobileTitle from '../../images/mobile-title.svg'
 ---
 
 <h1>
-  <Image src={mobileTitle} alt='mobile title' />
+  <Image src={mobileTitle} alt='title' />
 </h1>
 
 <style>
+  h1 {
+    margin: 0;
+    padding-top: 1rem;
+  }
+
   img {
     width: calc(100vw - 1rem);
     height: calc(100vw - 2rem);

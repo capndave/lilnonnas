@@ -1,12 +1,18 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import MobileHeader from '../components/MobileHeader/index.astro'
-import Menu from '../components/Menu/index.astro'
+import Buttons from '../components/Buttons/index.astro'
 ---
 
 <Layout>
   <MobileHeader />
   <main>
-    <Menu />
+    <Buttons />
   </main>
 </Layout>
+
+<style>
+  main {
+    padding: 0 0.5rem 1rem 0.5rem;
+  }
+</style>

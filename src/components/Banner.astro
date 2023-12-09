@@ -1,0 +1,33 @@
+---
+import { Image } from 'astro:assets'
+import nonnaWithPizzaCutter from '../images/nonna-with-pizza-cutter.svg'
+import pizzasOne from '../images/pizzas-one.jpg'
+import pizzasTwo from '../images/pizzas-two.jpg'
+import pizzasThree from '../images/pizzas-three.jpg'
+import pizzasFour from '../images/pizzas-four.jpg'
+---
+
+<div>
+  <Image src={pizzasOne} width='300' alt='pizzas' />
+  <Image src={pizzasTwo} width='300' alt='pizzas' />
+  <Image
+    id='nonna-with-pizza-cutter'
+    src={nonnaWithPizzaCutter}
+    width='100'
+    alt='pizzas'
+  />
+  <Image src={pizzasThree} width='300' alt='pizzas' />
+  <Image src={pizzasFour} width='300' alt='pizzas' />
+</div>
+
+<style>
+  div {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  #nonna-with-pizza-cutter {
+    transform: scale(3, 3);
+  }
+</style>

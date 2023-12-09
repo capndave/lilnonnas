@@ -1,0 +1,26 @@
+---
+import MenuSection from './MenuSection.astro'
+
+const response = await fetch(
+  'https://script.google.com/macros/s/AKfycbzlBL0aCYrxbqaemtct-eN8SQCTzpQ4Prybw3ek5_K1NhpoHjfxYK1k_fPKyuUm7D4/exec'
+)
+const { data } = await response.json()
+
+let map = {}
+for (const row of data) {
+  if (map[row.type]) {
+    map[row.type].push(row)
+  } else {
+    map[row.type] = [row]
+  }
+}
+---
+
+<div>{map['announcement'][0].description}</div>
+{map['special'] && <div>specials</div>}
+<MenuSection
+  title='Appetizers and Slices'
+  items={[...map['appetizer'], ...map['slice']]}
+/>
+<MenuSection title={`14" NY Style Pizza (Serves 2-3)`} items={map['pizza']} />
+<MenuSection title={`12" Gluten-Free Pizza (Serves 2)`} items={map['gf']} />

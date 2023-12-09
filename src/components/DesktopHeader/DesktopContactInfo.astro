@@ -1,0 +1,68 @@
+---
+import SocialMediaIcons from './SocialMediaIcons.astro'
+---
+
+<section>
+  <div class='bold'>Dine-in or Carry-out:</div>
+  <div>
+    <a href='https://maps.app.goo.gl/UeZef6xtVRdKnCho6' target='_blank'>
+      Ani's Day & Night: 7107 E. Riverside, Austin TX 78741
+    </a>
+  </div>
+  <div class='text-align-right'>(512) 993-8998</div>
+  <div class='bold'>Delivery:</div>
+  <div>
+    <a href='https://favordelivery.com/city/austin/' target='_blank'> Favor</a>
+     or
+    <a
+      href='https://www.ubereats.com/en-US/austin/food-delivery/lil-nonnas/2nNeEbmARn-sbFly9BniBQ/'
+      target='_blank'
+    >
+      Uber Eats
+    </a>
+  </div>
+  <div class='text-align-right'>
+    <a
+      href='https://www.toasttab.com/lilnonnas/v2/online-order#!/'
+      target='_blank'
+    >
+      Order online
+    </a>
+  </div>
+  <SocialMediaIcons />
+  <div></div>
+  <div class='text-align-right'>
+    <a href='https://www.toasttab.com/lilnonnas/giftcards' target='_blank'>
+      Buy a gift card
+    </a>
+  </div>
+</section>
+
+<style>
+  section {
+    display: grid;
+    row-gap: 8px;
+    grid-template-columns: 0.25fr 0.75fr 0.25fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
+    margin: 1rem 0;
+    width: 100%;
+  }
+
+  section a {
+    color: var(--red);
+    text-decoration: none;
+  }
+
+  section a:hover {
+    color: var(--red-hover);
+  }
+
+  .bold {
+    font-weight: bold;
+  }
+
+  .text-align-right {
+    text-align: right;
+  }
+</style>
