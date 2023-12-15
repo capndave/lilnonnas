@@ -8,9 +8,9 @@ const { title, items } = Astro.props
     {
       items.map((row) => (
         <li>
-          {row.price}&nbsp;
-          <span class='font-weight-bold'>{row.name}</span>:&nbsp;
-          {row.description}
+          <div>{row.price}</div>
+          <div class='font-weight-bold'>{row.name}</div>
+          <div>{row.description}</div>
         </li>
       ))
     }
@@ -27,6 +27,12 @@ const { title, items } = Astro.props
   ul {
     padding: 0;
     list-style-type: none;
+  }
+
+  li {
+    display: grid;
+    grid-template-columns: 30px 170px auto;
+    column-gap: 1rem;
   }
 
   li:not(:last-child) {
