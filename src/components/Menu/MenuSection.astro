@@ -4,15 +4,17 @@ const { title, items } = Astro.props
 
 <div>
   <h2>{title}</h2>
-  <div>
+  <ul>
     {
       items.map((row) => (
-        <div>
-          {row.name} - {row.description} = {row.price}
-        </div>
+        <li>
+          {row.price}&nbsp;
+          <span class='font-weight-bold'>{row.name}</span>:&nbsp;
+          {row.description}
+        </li>
       ))
     }
-  </div>
+  </ul>
 </div>
 
 <style>
@@ -20,5 +22,14 @@ const { title, items } = Astro.props
     font-family: SignPainter-ShowcardStunt, cabin, sans-serif;
     font-weight: 400px;
     font-size: 36px;
+  }
+
+  ul {
+    padding: 0;
+    list-style-type: none;
+  }
+
+  li:not(:last-child) {
+    margin-bottom: 10px;
   }
 </style>

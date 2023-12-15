@@ -1,0 +1,9 @@
+---
+import Menu from '../components/Menu/Menu.astro'
+import Announcement from '../components/Announcement.astro'
+import { fetchMenu } from '../utilities'
+const data = await fetchMenu()
+---
+
+<Announcement text={data.announcement[0].description} />
+<Menu {data} />

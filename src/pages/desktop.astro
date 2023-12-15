@@ -2,14 +2,14 @@
 import Banner from '../components/Banner.astro'
 import DesktopHeader from '../components/DesktopHeader/index.astro'
 import Layout from '../layouts/Layout.astro'
-import Menu from '../components/Menu/index.astro'
+import AnnouncementsAndMenu from '../components/AnnouncementsAndMenu.astro'
 ---
 
 <Layout>
   <DesktopHeader />
   <Banner />
   <main>
-    <Menu />
+    <AnnouncementsAndMenu />
   </main>
 </Layout>
 
@@ -21,5 +21,6 @@ import Menu from '../components/Menu/index.astro'
   */
   body {
     overflow-y: scroll;
+    overflow-x: hidden;
   }
 </style>

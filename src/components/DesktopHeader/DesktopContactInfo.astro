@@ -3,14 +3,14 @@ import SocialMediaIcons from './SocialMediaIcons.astro'
 ---
 
 <section>
-  <div class='bold'>Dine-in or Carry-out:</div>
+  <div class='font-weight-bold'>Dine-in or Carry-out:</div>
   <div>
     <a href='https://maps.app.goo.gl/UeZef6xtVRdKnCho6' target='_blank'>
       Ani's Day & Night: 7107 E. Riverside, Austin TX 78741
     </a>
   </div>
   <div class='text-align-right'>(512) 993-8998</div>
-  <div class='bold'>Delivery:</div>
+  <div class='font-weight-bold'>Delivery:</div>
   <div>
     <a href='https://favordelivery.com/city/austin/' target='_blank'> Favor</a>
      or
@@ -41,7 +41,7 @@ import SocialMediaIcons from './SocialMediaIcons.astro'
 <style>
   section {
     display: grid;
-    row-gap: 8px;
+    row-gap: 4px;
     grid-template-columns: 0.25fr 0.75fr 0.25fr;
     grid-template-rows: 1fr 1fr 1fr;
     align-items: center;
@@ -56,10 +56,6 @@ import SocialMediaIcons from './SocialMediaIcons.astro'
 
   section a:hover {
     color: var(--red-hover);
-  }
-
-  .bold {
-    font-weight: bold;
   }
 
   .text-align-right {
