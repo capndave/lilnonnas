@@ -1,0 +1,2 @@
+name = "lilnonnas-astro"
+compatibility_flags = [ "nodejs_compat" ]
