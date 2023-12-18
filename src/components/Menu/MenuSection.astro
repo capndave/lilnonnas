@@ -30,9 +30,15 @@ const { title, items } = Astro.props
   }
 
   li {
-    display: grid;
-    grid-template-columns: 30px 170px auto;
+    display: flex;
+    flex-flow: row wrap;
     column-gap: 1rem;
+
+    @media (width > 500px) {
+      display: grid;
+      grid-template-columns: 30px 170px auto;
+      column-gap: 1rem;
+    }
   }
 
   li:not(:last-child) {

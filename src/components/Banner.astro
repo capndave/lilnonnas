@@ -8,16 +8,16 @@ import pizzasFour from '../images/pizzas-four.jpg'
 ---
 
 <div>
-  <Image src={pizzasOne} width='300' alt='pizzas' />
-  <Image src={pizzasTwo} width='300' alt='pizzas' />
+  <Image src={pizzasOne} width='300' alt='pizzas' class='row-pic' />
+  <Image src={pizzasTwo} width='300' alt='pizzas' class='row-pic' />
   <Image
     id='nonna-with-pizza-cutter'
     src={nonnaWithPizzaCutter}
-    width='100'
+    width='230'
     alt='pizzas'
   />
-  <Image src={pizzasThree} width='300' alt='pizzas' />
-  <Image src={pizzasFour} width='300' alt='pizzas' />
+  <Image src={pizzasThree} width='300' alt='pizzas' class='row-pic' />
+  <Image src={pizzasFour} width='300' alt='pizzas' class='row-pic' />
 </div>
 
 <style>
@@ -25,9 +25,19 @@ import pizzasFour from '../images/pizzas-four.jpg'
     align-items: center;
     display: flex;
     justify-content: center;
+    margin: 0 -1rem;
   }
 
   #nonna-with-pizza-cutter {
-    transform: scale(2.5, 2.5);
+    position: absolute;
+
+    @media (width <= 850px) {
+      width: 150px;
+    }
+  }
+
+  .row-pic {
+    width: 25%;
+    height: auto;
   }
 </style>
