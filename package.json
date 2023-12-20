@@ -9,6 +9,7 @@
     "format": "prettier --write  \"**/*.{js,jsx,ts,tsx,md,mdx,astro}\" && eslint --fix \"src/**/*.{js,ts,jsx,tsx,astro}\"",
     "preview": "astro preview",
     "astro": "astro",
+    "astro-info": "astro info",
     "pages:dev": "wrangler pages dev --compatibility-date=2023-10-30 --compatibility-flags='nodejs_compat' -- astro dev",
     "pages:deploy": "astro build && wrangler pages deploy ./dist"
   },
