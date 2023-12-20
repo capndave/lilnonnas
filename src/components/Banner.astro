@@ -5,8 +5,11 @@ import pizzasOne from '../images/pizzas-one.jpg'
 import pizzasTwo from '../images/pizzas-two.jpg'
 import pizzasThree from '../images/pizzas-three.jpg'
 import pizzasFour from '../images/pizzas-four.jpg'
+
+const imagesAreLoaded = pizzasOne && pizzasTwo && pizzasThree && pizzasFour && nonnaWithPizzaCutter
 ---
 
+{imagesAreLoaded && (
 <div>
   <Image src={pizzasOne} width='300' alt='pizzas' class='row-pic' />
   <Image src={pizzasTwo} width='300' alt='pizzas' class='row-pic' />
@@ -19,6 +22,7 @@ import pizzasFour from '../images/pizzas-four.jpg'
   <Image src={pizzasThree} width='300' alt='pizzas' class='row-pic' />
   <Image src={pizzasFour} width='300' alt='pizzas' class='row-pic' />
 </div>
+)}
 
 <style>
   div {
