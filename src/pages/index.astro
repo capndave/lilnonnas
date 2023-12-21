@@ -13,7 +13,7 @@ import Spinner from '../components/Spinner.astro'
   main {
     align-items: center;
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     justify-content: center;
     text-align: center;
   }
@@ -24,6 +24,6 @@ import Spinner from '../components/Spinner.astro'
   if (window.innerWidth >= 500) {
     window.location.href = '/desktop'
   } else {
-    window.location.href = '/mobile'
+    window.location.href = '/mobile-landing'
   }
 </script>
