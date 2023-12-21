@@ -3,10 +3,22 @@ import MenuSection from './MenuSection.astro'
 const { data } = Astro.props
 ---
 
-{data['special'] && <div>specials</div>}
-<MenuSection
-  title='Appetizers and Slices'
-  items={[...data['appetizer'], ...data['slice']]}
-/>
-<MenuSection title={`14" NY Style Pizza (Serves 2-3)`} items={data['pizza']} />
-<MenuSection title={`12" Gluten-Free Pizza (Serves 2)`} items={data['gf']} />
+<section>
+  {data['special'] && <div>specials</div>}
+  <MenuSection
+    title='Appetizers and Slices'
+    items={[...data['appetizer'], ...data['slice']]}
+  />
+  <MenuSection
+    title={`14" NY Style Pizza (Serves 2-3)`}
+    items={data['pizza']}
+  />
+  <MenuSection title={`12" Gluten-Free Pizza (Serves 2)`} items={data['gf']} />
+</section>
+
+<style>
+  section {
+    animation: fadeIn 1s;
+    min-height: 800px; /* to prevent screen from jumping on menu load */
+  }
+</style>

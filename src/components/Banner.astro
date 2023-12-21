@@ -54,17 +54,8 @@ const images = await Promise.all(promises)
     margin: 0 -1rem;
   }
 
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
   #nonna-with-pizza-cutter {
-    animation: fadeIn 4s;
+    animation: fadeIn 1s;
     position: absolute;
 
     @media (width <= 850px) {
@@ -75,6 +66,6 @@ const images = await Promise.all(promises)
   .row-pic {
     width: 25%;
     height: auto;
-    animation: fadeIn 2s;
+    animation: fadeIn 750ms;
   }
 </style>
