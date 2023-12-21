@@ -35,6 +35,7 @@ const images = await Promise.all(promises)
         height={image.attributes.height}
         alt='pizzas'
         class='row-pic'
+        loading='eager'
       />
     ))
   }
@@ -43,6 +44,7 @@ const images = await Promise.all(promises)
     src={nonnaWithPizzaCutter}
     width='230'
     alt='pizzas'
+    loading='lazy'
   />
 </div>
 
