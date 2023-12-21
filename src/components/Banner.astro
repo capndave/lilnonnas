@@ -1,28 +1,50 @@
 ---
-import { Image } from 'astro:assets'
+import { getImage, Image } from 'astro:assets'
 import nonnaWithPizzaCutter from '../images/nonna-with-pizza-cutter.svg'
 import pizzasOne from '../images/pizzas-one.jpg'
 import pizzasTwo from '../images/pizzas-two.jpg'
 import pizzasThree from '../images/pizzas-three.jpg'
 import pizzasFour from '../images/pizzas-four.jpg'
 
-const imagesAreLoaded = pizzasOne && pizzasTwo && pizzasThree && pizzasFour && nonnaWithPizzaCutter
+const imageFiles = [pizzasOne, pizzasTwo, pizzasThree, pizzasFour]
+const promises = imageFiles.map((src) =>
+  getImage({
+    src,
+    format: 'webp',
+    width: 300 // resize optional
+  })
+)
+const images = await Promise.all(promises)
 ---
 
-{imagesAreLoaded && (
+<!--Preload images-->
+<Fragment slot='banner-component'>
+  {
+    imageFiles.map((image) => (
+      <link rel='preload' href={image.src} as='image' />
+    ))
+  }
+</Fragment>
+
 <div>
-  <Image src={pizzasOne} width='300' alt='pizzas' class='row-pic' />
-  <Image src={pizzasTwo} width='300' alt='pizzas' class='row-pic' />
+  {
+    images.map((image) => (
+      <Image
+        src={image.options.src as string}
+        width={image.attributes.width}
+        height={image.attributes.height}
+        alt='pizzas'
+        class='row-pic'
+      />
+    ))
+  }
   <Image
     id='nonna-with-pizza-cutter'
     src={nonnaWithPizzaCutter}
     width='230'
     alt='pizzas'
   />
-  <Image src={pizzasThree} width='300' alt='pizzas' class='row-pic' />
-  <Image src={pizzasFour} width='300' alt='pizzas' class='row-pic' />
 </div>
-)}
 
 <style>
   div {
@@ -32,7 +54,17 @@ const imagesAreLoaded = pizzasOne && pizzasTwo && pizzasThree && pizzasFour && n
     margin: 0 -1rem;
   }
 
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
   #nonna-with-pizza-cutter {
+    animation: fadeIn 4s;
     position: absolute;
 
     @media (width <= 850px) {
@@ -43,5 +75,6 @@ const imagesAreLoaded = pizzasOne && pizzasTwo && pizzasThree && pizzasFour && n
   .row-pic {
     width: 25%;
     height: auto;
+    animation: fadeIn 2s;
   }
 </style>

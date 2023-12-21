@@ -11,11 +11,15 @@
       rel='stylesheet'
     />
     <title>Lil Nonna's Pizzeria</title>
+
+    <!--See Banner.astro, where we define images to be preloaded-->
+    <slot name='banner-component' />
   </head>
   <body>
     <slot />
   </body>
 </html>
+
 <style is:global>
   :root {
     --red: #e73628;
